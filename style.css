@@ -21,3 +21,23 @@ a {
   color: #3498db;
   text-decoration: none;
 }
+
+#gameContainer {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background-color: #87ceeb;
+  border: 2px solid #000;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+#bird {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+  border-radius: 50%;
+  top: 200px;
+  left: 100px;
+}
