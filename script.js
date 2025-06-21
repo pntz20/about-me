@@ -38,3 +38,29 @@ checkButton.addEventListener("click", function () {
     result.textContent = "You're a senior!";
   }
 });
+
+const guessButton = document.getElementById("guessButton");
+const guessInput = document.getElementById("guessInput");
+const guessResult = document.getElementById("guessResult");
+
+// Generate a random number between 1 and 10
+const secretNumber = Math.floor(Math.random() * 10) + 1;
+
+guessButton?.addEventListener("click", function () {
+  const guess = parseInt(guessInput.value);
+
+  if (isNaN(guess) || guess < 1 || guess > 10) {
+    guessResult.textContent = "Do you even read instructions, bro? 🤔";
+  } else if (guess === secretNumber) {
+    guessResult.textContent = "🎉 Correct! You guessed it!";
+  }
+    else if (guess > secretNumber) {
+    guessResult.textContent = "Lower Banker ☺";
+  }
+    else if (guess < secretNumber) {
+    guessResult.textContent = "Higher!";
+  }
+    else {
+    guessResult.textContent = "❌ Nope! Try again.";
+  }
+});
